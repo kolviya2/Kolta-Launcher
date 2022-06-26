@@ -5,7 +5,7 @@
     "description": "Launcher Mincraft custom pour crack et premium pour mon serveur minecraft et mon modpack",
     "main": "src/app.js",
     "author": "Autheur et créateur principal : Luuxis - Fork : Fefe_du_973",
-    "url": "http://90.65.15.105/launcher/",
+    "url": "http://90.65.15.105/launcher",
     "engines": {
         "node": "16.x.x"
     },
