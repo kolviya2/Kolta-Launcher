@@ -1,11 +1,11 @@
 {
-    "name": "Selvania-Launcher",
-    "preductname": "Selvania Launcher",
-    "version": "1.0.1",
-    "description": "Launcher Mincraft custom (crack, premium)",
+    "name": "fefe_du_973-launcher",
+    "preductname": "Fefe_du_973 Launcher",
+    "version": "1.0.2",
+    "description": "Launcher Mincraft custom pour crack et premium pour mon serveur minecraft et mon modpack",
     "main": "src/app.js",
-    "author": "Luuxis",
-    "url": "http://launcher.selvania.fr",
+    "author": "Autheur et créateur principal : Luuxis - Fork : Fefe_du_973",
+    "url": "http://90.65.15.105/launcher/",
     "engines": {
         "node": "16.x.x"
     },
@@ -32,6 +32,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
+        "url": "git+https://github.com/Fefedu973/Fefe_du_973-Launcher.git"
     }
 }
