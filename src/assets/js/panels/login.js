@@ -182,9 +182,10 @@ class Login {
         let loginBtn = document.querySelector(".login-btn")
         let mojangBtn = document.querySelector('.mojang')
 
-        mojangBtn.innerHTML = "Offline"
+        mojangBtn.innerHTML = "Compte Crack"
 
         mojangBtn.addEventListener("click", () => {
+            document.querySelector(".login-btn").style.display = "block";
             document.querySelector(".login-card").style.display = "none";
             document.querySelector(".login-card-mojang").style.display = "block";
         })
