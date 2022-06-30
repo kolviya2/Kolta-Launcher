@@ -3,7 +3,7 @@
 import { logger, database, changePanel } from '../utils.js';
 
 const { Launch, Status } = require('minecraft-java-core');
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, shell } = require('electron');
 const launch = new Launch();
 const pkg = require('../package.json');
 
@@ -191,6 +191,32 @@ class Home {
         document.querySelector('.settings-btn').addEventListener('click', () => {
             changePanel('settings');
         });
+
+        document.querySelector('.Discord').addEventListener('click', () => {
+            this.openlink('https://discord.com');
+        })
+        document.querySelector('.Twitter').addEventListener('click', () => {
+            this.openlink('https://twitter.com');
+        })
+        document.querySelector('.Github').addEventListener('click', () => {
+            this.openlink('https://github.com');
+        })
+        document.querySelector('.Youtube').addEventListener('click', () => {
+            this.openlink('https://youtube.com');
+        })
+        document.querySelector('.Instagram').addEventListener('click', () => {
+            this.openlink('https://instagram.com');
+        })
+        document.querySelector('.Twitch').addEventListener('click', () => {
+            this.openlink('https://twitch.tv');
+        })
+        document.querySelector('.Website').addEventListener('click', () => {
+            this.openlink('http://fefe-du-973.duckdns.org');
+        })
+    }
+
+    openlink(url) {
+        shell.openExternal(url);
     }
 
     getdate(e) {
