@@ -31,6 +31,21 @@
         </div>
     </body>
     <script>
+    function toggleMute() {
+
+var video=document.getElementById("myVideo")
+var div=document.getElementById('button');
+
+if(video.muted){
+    video.muted = false;
+    div.innerHTML = `<button class="mutebtn" id="btn" onclick="toggleMute();">Mute <img id="muteimg" style="width: 25px;margin-left: 6px;vertical-align: middle;" src="assets/images/logo/mute.svg"></button>`;
+
+} else {
+    video.muted = true;
+    div.innerHTML = `<button class="mutebtn" id="btn" onclick="toggleMute();">Unmute <img id="muteimg" style="width: 25px;margin-left: 6px;vertical-align: middle;" src="assets/images/logo/unmute.svg"></button>`;
+}
+
+}
         var videoContainer = document.getElementById('videoContainer'),
     output = document.getElementById('output'),
     nextVideo,

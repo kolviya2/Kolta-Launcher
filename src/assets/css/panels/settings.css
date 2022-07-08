@@ -522,3 +522,21 @@
     display: inline-block;
     margin-right: 8px;
 }
+
+.mutebtn {
+    font: normal normal bold 13px/20px Poppins;
+    border-radius: 18px;
+    padding: 8px 30px;
+    background: rgb(81,236,87);
+    background: radial-gradient(circle, rgba(81,236,87,1) 0%, rgba(71,189,90,1) 100%);
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    transition: ease-in-out 0.5s;
+}
+
+.mutebtn:hover {
+    box-shadow: 0 0 15px #38a14a;
+    transform: scale(1.05);
+}
