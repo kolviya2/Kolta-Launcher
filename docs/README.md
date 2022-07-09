@@ -1,4 +1,4 @@
-<p align="center"><img src="../src/assets/images/icon.png" width="65%" height="65%" alt="icon-launcher" style="border-radius:50%;"></p>
+<p align="center"><img src="../src/assets/images/icon.png" width="65%" height="65%" alt="icon-launcher" style="border-radius: 50%"></p>
 
 <h1 align="center">Luuxi-launcher</h1>
 
