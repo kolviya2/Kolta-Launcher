@@ -211,7 +211,7 @@ class Home {
             this.openlink('https://twitch.tv');
         })
         document.querySelector('.Website').addEventListener('click', () => {
-            this.openlink('http://fefe-du-973.duckdns.org');
+            this.openlink('https://fefe-du-973.fr');
         })
     }
 
