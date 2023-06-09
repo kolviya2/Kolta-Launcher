@@ -132,6 +132,7 @@ class Home {
             launch.on('progress', (DL, totDL) => {
                 progressBar.style.display = "block"
                 document.querySelector(".text-download").innerHTML = `Téléchargement ${((DL / totDL) * 100).toFixed(0)}%`
+                document.querySelector(".text-download").style.width = 'auto';
                 ipcRenderer.send('main-window-progress', {DL, totDL})
                 progressBar.value = DL;
                 progressBar.max = totDL;
@@ -210,8 +211,8 @@ class Home {
         document.querySelector('.Twitch').addEventListener('click', () => {
             this.openlink('https://twitch.tv');
         })
-        document.querySelector('.Website').addEventListener('click', () => {
-            this.openlink('http://fefe-du-973.duckdns.org');
+        document.querySelector('.MyWebsite').addEventListener('click', () => {
+            this.openlink('https://fefe-du-973.fr');
         })
     }
 

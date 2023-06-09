@@ -81,7 +81,7 @@
                         <div class="size-cross"></div>
                         <input type="text" class="height-size input-settings" disabled>
                         <div class="select-wrap icon-monitor">
-                            <select id="select" class="select">
+                            <select id="select" style="cursor:pointer" class="select">
                                 <option disabled selected value style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                                 <optgroup label="Ratio 4:3">
                                     <option value="640 x 480">640 x 480</option>
@@ -123,7 +123,7 @@
             <div class="title-settings">Paramètre du son.</div>
             <div class="java-settings information">  
                 Pour couper le son de launcher :
-            <div style="display: block;position: absolute;top: 12px;left: 272px;" id="button"><button class="mutebtn" id="btn" onclick="toggleMute();"> Mute <img id="muteimg" style="width: 25px;margin-left: 6px;vertical-align: middle;" src="assets/images/logo/mute.svg"></button></div>
+            <div style="display: block;position: absolute;top: 12px;left: 272px;" id="button"><button id="muteButton" class="mutebtn" onclick="muteBtn()"> Mute <img id="muteimg" style="width: 25px;margin-left: 6px;vertical-align: middle;" src="assets/images/logo/mute.svg"></button></div>
             </div>
         </div>
     </div>

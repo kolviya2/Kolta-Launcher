@@ -1,33 +1,41 @@
-# Guide d'installation
-Le but de ce guide est de mettre en place le launcher, c'est à dire l'installation de toutes les ressources du jeu, les version supporté sont les suivantes : 
- - Vanilia
- - Forge
+# 1. Guide d'installation
 
-Pour Fabric ou d'autres loader de mods c'est en cours de développement.
+## 1.1 Pré-requis
+
+### - Pour commecer il est impératif de faire un fork du projet. **Si vous ne le faites pas vous ne respecterez pas les conditions d'utilisation.**
+
+### - Il faut installer les logiciels suivants pour pouvoir commencer à editer le launcher :
+
+- [Github Desktop](https://desktop.github.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/) **⚠️ Prendre la version LTS**
+- [Git](https://git-scm.com/)
+- NPM (voir instructions plus tard)
+
+### - Un Webserver sous apache et php fonctionnel ⚠️ **Obligatoire pour démarrer le launcher**
+
 ___
-## Téléchargement
+## 1.1.1 Le Fork
 
-Dans un premier temps il vous faut créer un fork du projet et le télécharger sur votre machine local. Allez sur le lien du repository github.
+Pour commencer vous devez faire un fork du projet pour ce faire rendez vous [ici](https://github.com/luuxis/Selvania-Launcher).
 
-https://github.com/luuxis/Uzurion-Launcher
+- Ensuite cliquez sur "Fork" :
 
-Créer un fork :
+![Créer un fork](./images/Fork.png)
 
-![Créer un fork](./images/create_fork.png)
+- Entrez les informations voulues et cliquez sur "Create fork" :
 
-Faire un clone : 
+![Entrer les infos](./images/Fork-info.png)
 
-![Faire un clone](./images/clone_project.png)
+___
+## 1.1.2 Faire un clone : 
+
+- Cliquez sur "Code" puis "Open with Github Desktop" :
+
+![Faire un clone](./images/Clone-github.png)
 
 
-Vous avez plusieurs solutions pour télécharger le projet, si vous avez déjà utiliser Github vous savez comment faire. <br>
-Si c'est la première fois que vous cloner un projet, je vous conseil de prendre la solution 2, il vous faut télécharger l'application Github Desktop dédié à la gestions des projets Git.<br>
-Si vous souhaitez juste télécharger les ressources une fois utiliser la solution 3 en zip, à noter que le lien avec le repo gitub est perdu avec cette solution.<br>
-Choisir sa méthode de clone : 
-
-![Faire un clone](./images/clone_solutions.png)
-
-Une fois l'application télécharger et votre compte Github authentifié il vous suffis de cloner le project.
+- L'application "Github Desktop" installé précédament va s'ouvrir, connectez vous à votre compte github
 
 ![Clone from App](./images/github_app_clone.png)
 

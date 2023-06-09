@@ -17,9 +17,9 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Je... vie...", "author": "Luuxis" },
-            { "message": "Salut je suis du code.", "author": "Luuxis" },
-            { "message": "Linux n' ai pas un os, mais un kernel.", "author": "Luuxis" }
+            { "message": "Salut ! 👋", "author": "Fefe_du_973" },
+            { "message": "Salut je suis du code.", "author": "Fefe_du_973" },
+            { "message": "Visite mon site pour + d'infos", "author": "Fefe_du_973" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -49,7 +49,7 @@ class Splash {
     }
 
     async checkUpdate() {
-        this.setStatus(`recherche de mise à jour...`);
+        this.setStatus(`Recherche de mise à jour...`);
         ipcRenderer.send('update-app');
 
         ipcRenderer.on('updateAvailable', () => {

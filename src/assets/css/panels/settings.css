@@ -85,6 +85,8 @@
 
 .center-align {
     text-align: center;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .settings-content-scroll {
@@ -260,6 +262,7 @@
     height: 18px;
     width: 18px;
     z-index: 2;
+    transition: transform .2s;
 
 }
 .slider-touch-left:hover,
@@ -512,6 +515,10 @@
     border-radius: 100%;
     background-color: #ffffff;
     border: 4px solid rgb(81,236,87);
+    transition: transform .2s;
+}
+.checkbox-settings:checked+label:hover {
+    transform: scale(1.1);
 }
 
 .checkround {
@@ -521,6 +528,11 @@
 .checkbox-settings+label {
     display: inline-block;
     margin-right: 8px;
+    transition: transform .2s;
+}
+
+.checkbox-settings+label:hover {
+    transform: scale(1.1);
 }
 
 .mutebtn {
