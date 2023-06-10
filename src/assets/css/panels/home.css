@@ -30,6 +30,7 @@
     border-radius: 15px;
     transition: 0.25s ease-in-out;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 .player-head:hover {
@@ -391,30 +392,37 @@
 
 .DiscordMedia {
     content: url(../../images/logo/social/discord.svg);
+    top: 3px;
 }
 
 .TwitterMedia {
     content: url(../../images/logo/social/twitter.svg);
+    top: 3px;
 }
 
 .GithubMedia {
     content: url(../../images/logo/social/github.png);
+    top: 2px;
 }
 
 .YoutubeMedia {
     content: url(../../images/logo/social/youtube.png);
+    top: 2px;
 }
 
 .InstagramMedia {
     content: url(../../images/logo/social/instagram.png);
+    top: 3px;
 }
 
 .TwitchMedia {
     content: url(../../images/logo/social/twitch.svg);
+    top: 2px;
 }
 
 .WebsiteMedia {
     content: url(../../images/logo/social/website.png);
+    top: 2px;
 }
 
 .background-video {
