@@ -18,7 +18,9 @@ class Settings {
         this.initJavaArgs();
         this.initResolution();
         this.initLauncherSettings();
+        muteonload();
     }
+
 
     initAccount() {
         document.querySelector('.accounts').addEventListener('click', async(e) => {

@@ -76,14 +76,10 @@
       function getVideoSource(index) {
         return 'assets/images/background/videos/Final_' + (index + 1) + '.mp4'; // Assuming video1.mp4, video2.mp4, ...
       }
-      window.onload = function() {
-    muteonload();
-};
 
 function muteonload() {
       var muteButton = document.getElementById('button');
       var muted = localStorage.getItem('muted');
-
       if (muted == 'true') {
         videoObjects[0].muted = true;
         videoObjects[1].muted = true;
@@ -94,7 +90,7 @@ function muteonload() {
         muteButton.innerHTML = `<button id="muteButton" class="mutebtn" onclick="muteBtn()"> Mute <img id="muteimg" style="width: 25px;margin-left: 6px;vertical-align: middle;" src="assets/images/logo/mute.svg"></button>`;
       }
     };
-      function muteBtn() {
+     function muteBtn() {
         var muteButton = document.getElementById('button');
         if (videoObjects[0].muted) {
           videoObjects[0].muted = false;

@@ -18,8 +18,8 @@ class Splash {
     async startAnimation() {
         let splashes = [
             { "message": "Salut ! 👋", "author": "Fefe_du_973" },
-            { "message": "Salut je suis du code.", "author": "Fefe_du_973" },
-            { "message": "Visite mon site pour + d'infos", "author": "Fefe_du_973" }
+            { "message": "Salut je suis du code. 👨‍💻", "author": "Fefe_du_973" },
+            { "message": "Visite mon site pour + d'infos 🌐", "author": "Fefe_du_973" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -44,16 +44,16 @@ class Splash {
             else this.checkUpdate();
         }).catch(e => {
             console.error(e);
-            return this.shutdown("Aucune connexion internet détectée,<br>veuillez réessayer ultérieurement.");
+            return this.shutdown("Aucune connexion internet détectée 🌐,<br>veuillez réessayer ultérieurement.");
         })
     }
 
     async checkUpdate() {
-        this.setStatus(`Recherche de mise à jour...`);
+        this.setStatus(`Recherche de mise à jour... 🔄️`);
         ipcRenderer.send('update-app');
 
         ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(`Mise à jour disponible !`);
+            this.setStatus(`Mise à jour disponible ! ✅`);
             this.toggleProgress();
         })
 
@@ -68,16 +68,16 @@ class Splash {
 
 
     startLauncher() {
-        this.setStatus(`Démarrage du launcher`);
+        this.setStatus(`Démarrage du launcher ⏳`);
         ipcRenderer.send('main-window-open');
         ipcRenderer.send('update-window-close');
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Arrêt dans 5s`);
+        this.setStatus(`${text}<br>Arrêt dans 5s ❌`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Arrêt dans ${i--}s`);
+            this.setStatus(`${text}<br>Arrêt dans ${i--}s ❌`);
             if (i < 0) ipcRenderer.send('update-window-close');
         }, 1000);
     }
