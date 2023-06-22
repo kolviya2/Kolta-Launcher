@@ -30,7 +30,8 @@ function createWindow() {
         show: false,
         webPreferences: {
             contextIsolation: false,
-            nodeIntegration: true
+            nodeIntegration: true,
+            webviewTag: true,
         },
     });
     electron.Menu.setApplicationMenu(null);

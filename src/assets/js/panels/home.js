@@ -30,7 +30,7 @@ class Home {
                 blockNews.innerHTML = `
                     <div class="news-header">
                         <div class="header-text">
-                            <div class="title">Aucun news n'ai actuellement disponible.</div>
+                            <div class="title">Aucun news n'est actuellement disponible.</div>
                         </div>
                     </div>
                     <div class="news-content">
@@ -61,6 +61,12 @@ class Home {
                             </div>
                         </div>`
                     news.appendChild(blockNews);
+                    let newsLink = document.getElementById('news-link');
+                    console.log(News.link)
+                    newsLink.addEventListener('click', () => {
+                        this.openlink(News.link);
+                    }
+                    )
                 }
             }
         } else {
@@ -189,10 +195,14 @@ class Home {
     }
 
     initBtn() {
+
         document.querySelector('.settings-btn').addEventListener('click', () => {
             changePanel('settings');
         });
 
+        document.querySelector('.player-head').addEventListener('click', () => {
+            changePanel('panelSkin');
+        });
         document.querySelector('.Discord').addEventListener('click', () => {
             this.openlink('https://discord.com');
         })

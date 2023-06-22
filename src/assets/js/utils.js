@@ -2,6 +2,7 @@ import config from './utils/config.js';
 import database from './utils/database.js';
 import logger from './utils/logger.js';
 import slider from './utils/slider.js';
+import player from './utils/player.js';
 
 export {
     config as config,
@@ -25,12 +26,14 @@ function addAccount(data) {
     div.classList.add("account");
     div.id = data.uuid;
     div.innerHTML = `
-        <img class="account-image" src="https://minotar.net/helm/${data.name}/100">
+    <div class="account-image mc-face-viewer-8x" style="background-image:url('assets/images/default/steve.png');transform: scale(1);"></div>
         <div class="account-name">${data.name}</div>
         <div class="account-uuid">${data.uuid}</div>
         <div class="account-delete"><div class="icon-account-delete icon-account-delete-btn"></div></div>
     `
     document.querySelector('.accounts').appendChild(div);
+    const playerInstance = new player();
+    playerInstance.fixAccounts(data.uuid);
 }
 
 function accountSelect(uuid) {
@@ -43,7 +46,8 @@ function accountSelect(uuid) {
     headplayer(pseudo);
 }
 
-function headplayer(pseudo) {
-    document.querySelector(".player-head").style.backgroundImage = `url(https://minotar.net/helm/${pseudo}/100)`;
+async function headplayer(pseudo) {
     document.querySelector(".avenir").innerText = pseudo;
+    const playerInstance = new player();
+    playerInstance.fixPlayer();
 }
