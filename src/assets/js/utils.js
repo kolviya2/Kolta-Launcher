@@ -18,7 +18,13 @@ function changePanel(id) {
     let panel = document.querySelector(`.${id}`);
     let active = document.querySelector(`.active`)
     if (active) active.classList.toggle("active");
-    panel.classList.add("active");
+    panel.classList.add("transition");
+    //add delay
+    setTimeout(() => {
+        panel.classList.remove("transition");
+        panel.classList.add("active");
+    }, 500);
+
 }
 
 function addAccount(data) {

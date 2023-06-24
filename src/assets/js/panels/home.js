@@ -112,6 +112,20 @@ class Home {
                 }
             }
 
+            if (!launcherSettings.launcher.autoConnect) {
+                //delete inside this.config.game_args array the element --server and the element that comes after him and the element --port and the element that comes after him if they exist
+                let indexServer = this.config.game_args.indexOf('--server');
+                if (indexServer > -1) {
+                    this.config.game_args.splice(indexServer, 2);
+                }
+                let indexPort = this.config.game_args.indexOf('--port');
+                if (indexPort > -1) {
+                    this.config.game_args.splice(indexPort, 2);
+                }
+
+                console.log(this.config.game_args)
+            }
+
             let opts = {
                 url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/files` : this.config.game_url,
                 authenticator: account,
@@ -120,7 +134,8 @@ class Home {
                 detached: launcherSettings.launcher.close === 'close-all' ? false : true,
                 java: this.config.java,
                 javapath: javaPath.path,
-                args: [...javaArgs.args, ...this.config.game_args],
+                JVM_ARGS: [...javaArgs.args],
+                GAME_ARGS: [...this.config.game_args],
                 screen,
                 modde: this.config.modde,
                 verify: this.config.verify,

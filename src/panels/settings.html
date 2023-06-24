@@ -20,12 +20,18 @@
             <div class="title-settings">Paramètre de votre RAM.</div>
             <div class="java-settings">
                 <div class="information">
-                    Définition de la RAM alloué à votre jeu, une quantité plus important augmenteras les performances de votre jeu.<br> A noter qu'il faut éviter de mettre une trop grande quantité sinon cela peut provoquer des pertes de performances survos
+                    Définition de la RAM alloué à votre jeu, une quantité plus important augmenteras les performances de
+                    votre jeu.<br> A noter qu'il faut éviter de mettre une trop grande quantité sinon cela peut
+                    provoquer des pertes de performances survos
                     autres applications.
                     <br><br>
-                    <b>- RAM Maximale :</b> Indique la quantité totale de RAM allouée à votre jeu. Il est recommandé de ne pas dépasser 50% de la quantité totale de RAM présente sur votre PC afin qu'il puisse fonctionner correctement. Si votre ordinateur
-                    a plus de 8Go de RAM, nous vous recommandons d'allouer 3Go. Si votre ordinateur a 4Go ou moins, n'allouez pas plus de 2Go.<br><br>
-                    <b>- RAM Minimale :</b> Indique la quantité minimale de RAM allouée au démarrage de votre jeu. Il est recommandé de ne pas mettre plus de 3Go pour cette valeur. La valeur typique est de 1Go.
+                    <b>- RAM Maximale :</b> Indique la quantité totale de RAM allouée à votre jeu. Il est recommandé de
+                    ne pas dépasser 50% de la quantité totale de RAM présente sur votre PC afin qu'il puisse fonctionner
+                    correctement. Si votre ordinateur
+                    a plus de 8Go de RAM, nous vous recommandons d'allouer 3Go. Si votre ordinateur a 4Go ou moins,
+                    n'allouez pas plus de 2Go.<br><br>
+                    <b>- RAM Minimale :</b> Indique la quantité minimale de RAM allouée au démarrage de votre jeu. Il
+                    est recommandé de ne pas mettre plus de 3Go pour cette valeur. La valeur typique est de 1Go.
                 </div>
                 <div class="ram-info">
                     <div class="memory-slider" min="0.5" max="8" step="0.5">
@@ -50,7 +56,9 @@
             <div class="title-settings">Emplacement de Java.</div>
             <div class="java-settings">
                 <div class="information">
-                    Le launcher utilise une version embarquée de Java.<br> Cette version est disponible dans le répertoire <span class="info-path"></span>.<br> Toutefois, vous pouvez spécifier votre propre exécutable.
+                    Le launcher utilise une version embarquée de Java.<br> Cette version est disponible dans le
+                    répertoire <span class="info-path"></span>.<br> Toutefois, vous pouvez spécifier votre propre
+                    exécutable.
                 </div>
                 <input type="text" class="path" disabled />
                 <button class="path-button">Changer</button>
@@ -73,16 +81,18 @@
             <div class="title-settings">Paramètre de la résolution de minecraft.</div>
             <div class="java-settings">
                 <div class="information">
-                    Définissez une résolution personnalisée ou choisissez-en une dans la liste en fonction de la taille de votre écran.
+                    Définissez une résolution personnalisée ou choisissez-en une dans la liste en fonction de la taille
+                    de votre écran.
                 </div>
                 <div class="input-size-content">
                     <div class="input-size">
-                        <input type="text" class="width-size input-settings" disabled>
+                        <input type="text" class="width-size input-settings">
                         <div class="size-cross"></div>
-                        <input type="text" class="height-size input-settings" disabled>
+                        <input type="text" class="height-size input-settings">
                         <div class="select-wrap icon-monitor">
                             <select id="select" style="cursor:pointer" class="select">
-                                <option disabled selected value style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option disabled selected value style="display: none">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                                 <optgroup label="Ratio 4:3">
                                     <option value="640 x 480">640 x 480</option>
                                     <option value="800 x 600">800 x 600</option>
@@ -109,21 +119,45 @@
                     </div>
                 </div>
             </div>
+            <div class="title-settings">Paramètre du plein écran</div>
+            <div class="java-settings information">
+                Lancer le jeu en plein écran :
+                <input type="checkbox" class="checkbox-settings" id="fullscreen"><label for="fullscreen">
+                    <div class="checkround"></div>
+                </label>
+            </div>
         </div>
     </div>
 
     <div class="tabs-settings-content">
         <div class="center-page">
             <div class="title-settings">Paramètre après le lancement du jeu.</div>
-            <div class="java-settings information">         
-                <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close"><div class="checkround"></div></label> Fermer le launcher après le lancement du jeu.</br>
-                <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label for="launcher-close-all"><div class="checkround"></div></label> Fermer le jeu si le launcher est fermé.</br>
-                <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open"><div class="checkround"></div></label> Garder le launcher ouvert après le lancement du jeu.
+            <div class="java-settings information">
+                <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close">
+                    <div class="checkround"></div>
+                </label> Fermer le launcher après le lancement du jeu.</br>
+                <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label
+                    for="launcher-close-all">
+                    <div class="checkround"></div>
+                </label> Fermer le jeu si le launcher est fermé.</br>
+                <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open">
+                    <div class="checkround"></div>
+                </label> Garder le launcher ouvert après le lancement du jeu.
             </div>
             <div class="title-settings">Paramètre du son.</div>
-            <div class="java-settings information">  
+            <div class="java-settings information">
                 Pour couper le son de launcher :
-            <div style="display: block;position: absolute;top: 12px;left: 272px;" id="button"><button id="muteButton" class="mutebtn" onclick="muteBtn()"> Mute <img id="muteimg" style="width: 25px;margin-left: 6px;vertical-align: middle;" src="assets/images/logo/mute.svg"></button></div>
+                <div style="display: block;position: absolute;top: 12px;left: 272px;" id="button"><button
+                        id="muteButton" class="mutebtn" onclick="muteBtn()"> Mute <img id="muteimg"
+                            style="width: 25px;margin-left: 6px;vertical-align: middle;"
+                            src="assets/images/logo/mute.svg"></button></div>
+            </div>
+            <div class="title-settings">Paramètre de l'auto-connect</div>
+            <div class="java-settings information">
+                Se connecter automatiquement au serveur :
+                <input type="checkbox" class="checkbox-settings" id="auto-connect"><label for="auto-connect">
+                    <div class="checkround"></div>
+                </label>
             </div>
         </div>
     </div>
