@@ -139,6 +139,11 @@ class Home {
                 screen,
                 modde: this.config.modde,
                 verify: this.config.verify,
+                loader: {
+                    type: this.config.loader.type,
+                    build: this.config.loader.build,
+                    enable: this.config.loader.enable,
+                },
                 ignored: this.config.ignored,
                 memory: {
                     min: `${ram.ramMin * 1024}M`,
