@@ -31,11 +31,15 @@ class Player {
         if (accessToken == "null") {
             // Player token is null
             document.querySelector(".player-head").style.pointerEvents = "none";
+            document.getElementById("head-container").title = "Connectez-vous à un compte premium pour changer de skin";
+            document.getElementById("head-container").style.cursor = "not-allowed";
             console.log("Player token is null");
             var elements = document.querySelector('.player-head');
             elements.style.backgroundImage = `url('assets/images/default/steve.png')`;
         } else {
             // Player token is not null
+            document.getElementById("head-container").title = "";
+            document.getElementById("head-container").style.cursor = "default";
             document.querySelector(".player-head").style.pointerEvents = "auto";
             console.log("Player token is not null");
             var elements = document.querySelector('.player-head');
